@@ -21,6 +21,7 @@ public class Traindoc{
     File f = new File(filename);
     Scanner sca = new Scanner(f);
     route = sca.nextLine().substring(2);
+    if(route.contains("SERVICE DISRUPTION")) route = sca.nextLine().substring(2);
     skipOverHeaders(sca);
     LinkedList<StationStop> stops = new LinkedList<StationStop>();
     while(sca.hasNextLine()){

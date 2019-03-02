@@ -29,10 +29,13 @@ public class Traindoc{
   }
   private void getDateAndNum(){
     String[] splitName = filename.split("_");
-    routeNum = Integer.parseInt(splitName[0]);
-    year = Integer.parseInt(splitName[0].substring(0,4));
-    month = Integer.parseInt(splitName[0].substring(4,6));
-    day = Integer.parseInt(splitName[0].substring(6,8));
+    routeNum = Integer.parseInt(splitName[0].substring(
+                                                      splitName[0].lastIndexOf("/")+1,
+                                                      splitName[0].length()
+                                                      ));
+    year = Integer.parseInt(splitName[1].substring(0,4));
+    month = Integer.parseInt(splitName[1].substring(4,6));
+    day = Integer.parseInt(splitName[1].substring(6,8));
   }
   private void getRouteName(Scanner scaß){
 

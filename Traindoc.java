@@ -16,10 +16,24 @@ public class Traindoc{
   }
 
   public Traindoc(String filename)throws FileNotFoundException{
+    this.filename = filename;
+    getDateAndNum();
     File f = new File(filename);
     Scanner sca = new Scanner(f);
-    while(sca.hasNext()){
-      System.out.println(sca.next());
+    getRouteName(sca);
+    skipOverHeaders(sca);
+    LinkedList<StationStop> stops = new LinkedList<StationStop>();
+    while(sca.hasNextLine()){
+      stops.add( new StationStop(sca.nextLine()) );
     }
+  }
+  private void getDateAndNum(){
+
+  }
+  private void getRouteName(Scanner scaß){
+
+  }
+  private void skipOverHeaders(Scanner sca){
+
   }
 }

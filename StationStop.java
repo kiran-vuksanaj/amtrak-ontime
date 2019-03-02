@@ -4,7 +4,11 @@ public class StationStop{
   private boolean arr,dep;
 
   public StationStop(String line){
-    
+    String[] sections = line.split("\\s++");
+    for(int i=1;i<8;i++){
+      System.out.print(sections[i]+"\t");
+    }
+    System.out.println("");
   }
 
 

@@ -39,6 +39,9 @@ public class Traindoc{
     day = Integer.parseInt(splitName[1].substring(6,8));
   }
   private void skipOverHeaders(Scanner sca){
-
+    String line = sca.nextLine();
+    while(!(line.equals("* V    V  V     V  V     V     V     V"))){
+      line = sca.nextLine();
+    }
   }
 }

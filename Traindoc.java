@@ -20,7 +20,7 @@ public class Traindoc{
     getDateAndNum();
     File f = new File(filename);
     Scanner sca = new Scanner(f);
-    getRouteName(sca);
+    route = sca.nextLine().substring(2);
     skipOverHeaders(sca);
     LinkedList<StationStop> stops = new LinkedList<StationStop>();
     while(sca.hasNextLine()){
@@ -36,9 +36,6 @@ public class Traindoc{
     year = Integer.parseInt(splitName[1].substring(0,4));
     month = Integer.parseInt(splitName[1].substring(4,6));
     day = Integer.parseInt(splitName[1].substring(6,8));
-  }
-  private void getRouteName(Scanner scaß){
-
   }
   private void skipOverHeaders(Scanner sca){
 
